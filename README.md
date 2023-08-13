@@ -15,8 +15,6 @@ This script works by authenticating with the Jira api to utilize multiple differ
 
 4. Schedule this script to run every day through the task scheduler of your choice. (My deployment is a Ninja scheduled script running on a automation server.)
 
-⚠️ **Warning:** This repository is intended for production. Test implementations should be carried out in the designated test repository.
-
 ### 📄 DetermineRisk($issue) ###
 
 This function assesses cybersecurity, financial, compliance, and reputation risks. It categorizes vendors as trivial, critical, or moderate.
