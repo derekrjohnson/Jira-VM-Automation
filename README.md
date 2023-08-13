@@ -13,8 +13,7 @@ This script works by authenticating with the Jira api to utilize multiple differ
 
 ![image](https://github.com/derekrjohnson/Jira-VM-Automation/assets/142181223/8ce980cb-44e4-48d8-b8fa-3cc429cc5361)
 
-4. 🧩 Configure an environment variable in your test environment to store the Teams webhook.
-5. 🕰 Schedule a recurring task to run the script every minute, ensuring continuous monitoring.
+4. Schedule this script to run every day through the task scheduler of your choice. (My deployment is a Ninja scheduled script running on a automation server.)
 
 ⚠️ **Warning:** This repository is intended for production. Test implementations should be carried out in the designated test repository.
 
