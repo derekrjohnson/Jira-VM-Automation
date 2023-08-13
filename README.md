@@ -8,54 +8,55 @@ This script works by authenticating with the Jira api to utilize multiple differ
 
 ### 📄 DetermineRisk($issue) ###
 
- - Assess cybersecurity, financial, compliance, and reputation risks.
- - Categorizes vendors as trivial, critical, or moderate.
+This function assesses cybersecurity, financial, compliance, and reputation risks. It categorizes vendors as trivial, critical, or moderate.
 
 ### 🔄 Update-VendorRiskField($issue, $risk_category) ###
 
- - Updates vendor risk custom field with calculated risk category.
+This function updates the vendor risk custom field with the calculated risk category.
 
 ### 🔄 Update-Priority($issue, $risk_category) ###
 
- - Updates issue priority based on risk category.
+This function updates the issue priority based on the risk category.
 
 ### 📆 VendorReview($risk_category, $annual_cost_value) ###
 
- - Determines duration between vendor reviews based on risk and cost.
+This function determines the duration between vendor reviews based on the risk and cost.
 
 ### 📅 NextReviewDate($vendor_review_duration, $last_vendor_review_date) ###
 
- - Calculates the next vendor review date.
+This function calculates the next vendor review date.
 
 ### 📋 JiraSubtask($issue, $next_review_date) ###
 
- - Creates Jira subtask with due date, summary, and description.
+This function creates a Jira subtask with a due date, summary, and description.
 
 ### 📆 UpdateDueDate($issue, $duedate) ###
 
- - Updates due date for each issue.
+This function updates the due date for each issue.
 
 ### 🔄 Edit-JiraIssueTransition($issue) ###
 
- - Sets transition id to 71 when subtask is created 21 days from review.
+This function sets the transition id to 71 when a subtask is created 21 days from the review.
 
 ### ✅ CheckifSubtask($issue) ###
 
- - Checks if issue is a subtask.
+This function checks if an issue is a subtask.
 
 ### 🔄 UpdateSubtask($issue) ###
 
- - Updates subtask with parent information.
+This function updates the subtask with parent information.
 
 ### 🔄 Main Loop ###
 
- - Executes each function for VM board issues.
- - Creates subtask if due in 21 days and $next_review_date isn't null.
+The main loop executes each function for VM board issues and creates a subtask if it's due in 21 days and $next_review_date isn't null.
 
 ## 📜 Version and Last Change ##
 v1.1 - July 2023
 
 ## 🧙‍♂️ Origin Author ##
-Derek (powershell wizard apprentice) Johnson
+Derek Johnson
 
-## 🙌 Contributors ##
+## 📚 References ##
+
+* [JIRA Cloud REST API Reference](https://docs.atlassian.com/software/jira/docs/api/REST/1000.824.0/#:~:text=JIRA%20Cloud%20REST%20API%20Reference%201%20Getting%20started,methods%20...%208%20Experimental%20methods%20...%20More%20items)
+
