@@ -9,7 +9,8 @@ This script works by authenticating with the Jira api to utilize multiple differ
 ## 🚀 Getting Started
 
 1. 📥 Clone this repository to your production environment.
-2. 🛠 Modify the $jiraURL, $username, and $apiToken variables in the script. In my deployment I store the API token as a Ninja global custom field with permissions set to only allow scripts to read the field.(Note: the user set in the script needs to be an administrator on the project)
+2. 🛠 Modify the $jiraURL, $username, and $apiToken variables in the script. In my deployment I store the API token as a Ninja global custom field with permissions set to only allow scripts to read the field. 
+ (Note: the user set in the script needs to be an administrator on the project)
 
 ![image](https://github.com/derekrjohnson/Jira-VM-Automation/assets/142181223/8ce980cb-44e4-48d8-b8fa-3cc429cc5361)
 
