@@ -6,6 +6,15 @@ Automate risk assessment, priority updates, and subtask generation for VM Jira b
 
 This script works by authenticating with the Jira api to utilize multiple different endpoints. The script's main function is to calculate and set vendor risk and priority fields, calculate the next vendor review date and populate a custom field, create a subtask automatically when it is 21 days from a vendors next review date, and moves the task to the under review column on the project board when that subtask is created, all based on definitions outlined in the policy.
 
+## 🚀 Getting Started
+
+1. 📥 Clone this repository to your production environment.
+2. 🛠 Modify the `Config.ini` file, replacing `<CLIENT_SECRET>`, `<CLIENT_ID>`, and `<TENANT_ID>` with your credentials.
+3. 🧩 Configure an environment variable in your test environment to store the Teams webhook.
+4. 🕰 Schedule a recurring task to run the script every minute, ensuring continuous monitoring.
+
+⚠️ **Warning:** This repository is intended for production. Test implementations should be carried out in the designated test repository.
+
 ### 📄 DetermineRisk($issue) ###
 
 This function assesses cybersecurity, financial, compliance, and reputation risks. It categorizes vendors as trivial, critical, or moderate.
